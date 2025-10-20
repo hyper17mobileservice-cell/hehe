@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>For My Love 💕</title>
   <style>
     body {
       background-color: #ffd6e8;
       margin: 0;
-      padding: 0;
+      padding: 40px 0;
       font-family: 'Comic Sans MS', 'Comic Neue', cursive;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      overflow: hidden;
       text-align: center;
+      overflow-x: hidden;
     }
 
     .section {
@@ -46,6 +44,7 @@
       font-size: 20px;
       animation: floatUp 6s linear infinite;
       opacity: 0.7;
+      z-index: -1;
     }
 
     @keyframes floatUp {
@@ -62,12 +61,12 @@
 <body>
 
   <div class="section">
-    <img src="hands.jfif" alt=>
+    <img src="hands.jfif" alt="Couple Holding Hands">
     <p>I may not be able to hold you in my arms right now</p>
   </div>
 
   <div class="section">
-    <img src="hug.jfif" alt=>
+    <img src="hug.jfif" alt="Couple Hugging">
     <p>But I will hold you in my heart every minute of every day</p>
   </div>
 
@@ -80,12 +79,8 @@
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.animationDuration = (4 + Math.random() * 4) + 's';
       document.body.appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 8000);
+      setTimeout(() => heart.remove(), 8000);
     };
-
     setInterval(createHeart, 600);
   </script>
 
